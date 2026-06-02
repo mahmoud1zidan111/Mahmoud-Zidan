@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mahmoud-zidan.vercel.app/sitemap.xml
+Sitemap: https://mahmoudzidan.vercel.app/sitemap.xml
