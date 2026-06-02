@@ -5,7 +5,8 @@ export const siteConfig = {
   defaultTitle: "Mahmoud Zidan | React & Full Stack Developer Portfolio",
   defaultDescription:
     "Mahmoud Zidan is a React and Full Stack Developer based in Cairo, Egypt, building responsive web applications with React, JavaScript, Node.js, Tailwind CSS, and modern frontend engineering.",
-  siteUrl: import.meta.env.VITE_PUBLIC_SITE_URL || "https://mahmoud-zidan.vercel.app",
+  siteUrl:
+    import.meta.env.VITE_PUBLIC_SITE_URL || "https://mahmoudzidan.vercel.app",
   locale: "en_US",
   language: "en",
   email: "mailto:mmaam2210@gmail.com",
