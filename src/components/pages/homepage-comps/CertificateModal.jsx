@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import { imageKitUrl } from "../../../utils/imageKit";
+
 const CertificateModal = ({ selectedImage, setSelectedImage }) => {
   return (
     <div
@@ -15,8 +18,10 @@ const CertificateModal = ({ selectedImage, setSelectedImage }) => {
 
         <img
           className="rounded-md w-full h-full object-contain miniModal"
-          src={selectedImage}
-          alt="Selected Certificate"
+          src={selectedImage ? imageKitUrl(selectedImage, ["w-1100", "q-85", "f-auto"]) : ""}
+          alt="Selected Mahmoud Zidan certificate"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </div>

@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import { imageKitUrl } from "../utils/imageKit";
+
 const ProjectCard = ({ project, handleModalInfo }) => {
   const handleClickDemo = (demoUrl) => {
     window.open(demoUrl, "_blank", "noopener,noreferrer");
@@ -8,11 +11,15 @@ const ProjectCard = ({ project, handleModalInfo }) => {
   };
 
   return (
-    <div className="shadow-md shadow-gray-600 rounded-lg max-w-md mx-auto">
+    <div className="shadow-md shadow-gray-600 rounded-lg max-w-md mx-auto  overflow-hidden">
       <img
         onClick={() => handleModalInfo(project)}
-        src={project.src}
-        alt="project card"
+        src={imageKitUrl(project.src, ["w-520", "q-80", "f-auto"])}
+        alt={`${project.title} project by Mahmoud Zidan`}
+        width="520"
+        height="320"
+        loading="lazy"
+        decoding="async"
         className="rounded-md duration-200 hover:scale-105 cursor-pointer"
       />
 

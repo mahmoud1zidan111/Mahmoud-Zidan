@@ -91,23 +91,32 @@ const Techs = () => {
   return (
     <section
       name="Technologies"
+      aria-labelledby="technologies-title"
       className="relative w-full md:h-screen h-unset"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-        <div>
-          <h2 className="text-4xl font-bold inline pb-1 border-b-4 border-primary-color/40 sm:text-5xl">
+        <div data-gsap="left">
+          <h2 id="technologies-title" className="text-4xl font-bold inline pb-1 border-b-4 border-primary-color/40 sm:text-5xl">
             Technologies
           </h2>
-          <p className="py-6">These are the technologies I've worked with</p>
+          <p className="py-6">These are the technologies I{"'"}ve worked with as a React and Full Stack Developer</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 text-center py-8 sm:px-0">
+        <div data-gsap-stagger="scale" className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 text-center py-8 sm:px-0">
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
               className={`flex flex-col justify-between shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >
-              <img className="w-20 mx-auto py-2 md:py-4" src={src} alt="" />
+              <img
+                className="w-20 mx-auto py-2 md:py-4"
+                src={src}
+                alt={`${title} technology icon`}
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
               <p className="mt-4 md:mt-2">{title}</p>
             </div>
           ))}

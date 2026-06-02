@@ -21,17 +21,18 @@ const MyProjects = () => {
   return (
     <section
       name="Projects"
+      aria-labelledby="projects-title"
       className="relative w-full text-white md:h-screen h-unset"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="mb-4">
-          <h2 className="text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl pb-1">
+        <div data-gsap="left" className="mb-4">
+          <h2 id="projects-title" className="text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl pb-1">
             Projects
           </h2>
-          <p className="py-6">Check out some of my work here</p>
+          <p className="py-6">Explore selected React, JavaScript, Tailwind CSS, and frontend development projects by Mahmoud Zidan</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-6">
+        <div data-gsap-stagger="up" className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-6">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -42,7 +43,7 @@ const MyProjects = () => {
           ))}
         </div>
 
-        <div className="flex justify-end mr-4">
+        <div data-gsap="right" className="flex justify-end mr-4">
           <Link
             to="projects"
             className="hover:underline hover:underline-offset-4 hover:text-primary-color/60 cursor-pointer text-gray-300 flex items-center"

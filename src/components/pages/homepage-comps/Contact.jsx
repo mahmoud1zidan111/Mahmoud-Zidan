@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -52,11 +51,12 @@ const Contact = () => {
   return (
     <section
       name="Contact"
+      aria-labelledby="contact-title"
       className="relative w-full md:h-screen p-4 text-white h-unset"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <h2 className="text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl">
+        <div data-gsap="left" className="pb-8">
+          <h2 id="contact-title" className="text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl">
             Contact
           </h2>
 
@@ -66,6 +66,7 @@ const Contact = () => {
         <div className="flex justify-center items-center">
           <form
             onSubmit={handleSubmit}
+            data-gsap-stagger="up"
             className="flex flex-col w-full md:w-1/2"
           >
             {/* الاسم: مطابق للـ sender block */}
@@ -73,6 +74,8 @@ const Contact = () => {
               type="text"
               name="fi-sender-fullName"
               placeholder="Enter your name"
+              aria-label="Your full name"
+              autoComplete="name"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color"
               required
             />
@@ -82,6 +85,8 @@ const Contact = () => {
               type="email"
               name="fi-sender-email"
               placeholder="Enter your email"
+              aria-label="Your email address"
+              autoComplete="email"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color"
               required
             />
@@ -91,12 +96,13 @@ const Contact = () => {
               name="fi-text-message"
               rows={10}
               placeholder="Enter your message"
+              aria-label="Your message"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color"
               required
             ></textarea>
 
             <button className="text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Let's talk
+              Let{"'"}s talk
             </button>
           </form>
         </div>

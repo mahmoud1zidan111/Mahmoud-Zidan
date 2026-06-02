@@ -6,24 +6,25 @@ const About = () => {
   return (
     <section
       name="About"
+      aria-labelledby="about-title"
       className="relative w-full md:h-screen text-white h-unset"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full text-lg">
-        <div className="pb-8">
-          <h2 className="text-4xl sm:text-5xl font-bold inline border-b-4 border-primary-color/40">
+        <div data-gsap="left" className="pb-8">
+          <h2 id="about-title" className="text-4xl sm:text-5xl font-bold inline border-b-4 border-primary-color/40">
             About me
           </h2>
         </div>
 
-        <p className="mb-4 py-6">
-          Hey! I{"'"}m based in Cairo, Egypt (Nozha), and I am a graduate of ASA
+        <p data-gsap="up" className="mb-4 py-6">
+          Hey! I{"'"}m Mahmoud Zidan, a React and Full Stack Developer based in Cairo, Egypt (Nozha), and I am a graduate of ASA
           Academy, Faculty of Marketing and International Trade, with a
           background in Marketing and Social Media. Over time, I discovered a
           stronger passion for technology and problem-solving, which led me to
           transition into software development.
         </p>
 
-        <p>
+        <p data-gsap="up">
           I have a solid foundation in C++, Data Structures, and Algorithms, and
           I{"'"}ve solved many problem-solving challenges using both C++ and
           JavaScript. This experience helped me build strong logical thinking,
@@ -37,6 +38,7 @@ const About = () => {
 
         <Link
           to="/about-me"
+          data-gsap="up"
           className="text-black font-semibold text-[16px] w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer mx-auto md:mx-0 self-end mt-8 hover:scale-110 duration-300"
         >
           See more
