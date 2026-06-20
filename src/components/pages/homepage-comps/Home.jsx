@@ -71,7 +71,7 @@ const Home = () => {
               "portfolio/profile/mahmoud_zidan.png?updatedAt=1780363003070",
               ["w-480", "q-85", "f-auto"],
             )}
-            alt="Mahmoud Zidan React and Full Stack Developer portrait"
+            alt="Mahmoud Zidan Full Stack Developer in Cairo Egypt"
             width="480"
             height="640"
             decoding="async"
