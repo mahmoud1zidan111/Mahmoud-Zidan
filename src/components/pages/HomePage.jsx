@@ -13,11 +13,13 @@ import { routesMetadata } from "../../seo/siteConfig";
 const HomePage = () => {
   const certificates = [
     {
-      image: "/images/certificates/Mahmoud_Magdy_Suod_Sweilm_NTI.jpg",
+      image:
+        "portfolio/certificates/Mahmoud_Magdy_Suod_Sweilm_ITIgegis.png?updatedAt=178036311095",
       alt: "Mahmoud Zidan NTI web development certificate",
     },
     {
-      image: "/images/certificates/Mahmoud_Magdy_Suod_Sweilm_ITIgegis.png",
+      image:
+        "portfolio/certificates/Mahmoud_Magdy_Suod_Sweilm_NTI.jpg?updatedAt=1780363110663",
       alt: "Mahmoud Zidan ITI web development certificate",
     },
   ];

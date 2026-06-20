@@ -9,9 +9,15 @@ const AboutSectionAbout = () => {
     >
       <div className="mx-auto max-w-screen-lg px-4">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-12">
-          <div data-gsap="scale" className="w-full flex justify-center lg:w-5/12 lg:justify-start">
+          <div
+            data-gsap="scale"
+            className="w-full flex justify-center lg:w-5/12 lg:justify-start"
+          >
             <img
-              src={imageKitUrl("/images/mahmoud_zidan_2.png", ["w-520", "q-85", "f-auto"])}
+              src={imageKitUrl(
+                "portfolio/profile/mahmoud_zidan_2.png?updatedAt=1780363003020",
+                ["w-520", "q-85", "f-auto"],
+              )}
               alt="Mahmoud Zidan React developer based in Cairo Egypt"
               width="520"
               height="650"
@@ -37,7 +43,10 @@ const AboutSectionAbout = () => {
               About Mahmoud Zidan
             </h1>
 
-            <div data-gsap="right" className="mt-4 inline-flex items-center bg-primary-color/20 rounded-md py-2 px-4">
+            <div
+              data-gsap="right"
+              className="mt-4 inline-flex items-center bg-primary-color/20 rounded-md py-2 px-4"
+            >
               <img
                 className="h-[28px] w-auto mr-2"
                 src="/icons/egypt.png"

@@ -1,88 +1,77 @@
-import html from "../../../assets/html.png";
-import css from "../../../assets/css.png";
-import javascript from "../../../assets/javascript.png";
-import react from "../../../assets/react.png";
-import vue from "../../../assets/c++.png";
-import git from "../../../assets/git.png";
-import github from "../../../assets/github.png";
-import node from "../../../assets/node.png";
-import nextjs from "../../../assets/nextjs.png";
-import postgres from "../../../assets/postgres.png";
-import redux from "../../../assets/redux.png";
-import tailwind from "../../../assets/tailwind.png";
 import { Link as ScrollLink } from "react-scroll";
+import { imageKitUrl } from "../../../utils/imageKit";
 
 const Techs = () => {
   const techs = [
     {
       id: 1,
-      src: html,
+      src: "portfolio/techs/html.png?updatedAt=1780363202924",
       title: "HTML",
       style: "shadow-orange-500",
     },
     {
       id: 2,
-      src: css,
+      src: "portfolio/techs/css.png?updatedAt=1780363202598",
       title: "CSS",
       style: "shadow-blue-500",
     },
     {
       id: 3,
-      src: javascript,
+      src: "portfolio/techs/javascript.png?updatedAt=1780363202620",
       title: "JavaScript",
       style: "shadow-yellow-400",
     },
     {
       id: 4,
-      src: react,
+      src: "portfolio/techs/react.png?updatedAt=1780363202959",
       title: "React",
       style: "shadow-cyan-400",
     },
     {
       id: 5,
-      src: vue,
+      src: "portfolio/techs/c++.png?updatedAt=1780363202564",
       title: "C++",
       style: "shadow-emerald-500",
     },
     {
       id: 6,
-      src: tailwind,
+      src: "portfolio/techs/tailwind.png?updatedAt=1780363202874",
       title: "Tailwind CSS",
       style: "shadow-cyan-700",
     },
     {
       id: 7,
-      src: node,
+      src: "portfolio/techs/node.png?updatedAt=1780363202756",
       title: "Node JS",
       style: "shadow-lime-400",
     },
     {
       id: 8,
-      src: nextjs,
+      src: "portfolio/techs/nextjs.png?updatedAt=1780363202764",
       title: "Next JS",
       style: "shadow-white",
     },
     {
       id: 9,
-      src: git,
+      src: "portfolio/techs/git.png?updatedAt=1780363202521",
       title: "Git",
       style: "shadow-orange-600",
     },
     {
       id: 10,
-      src: github,
+      src: "portfolio/techs/github.png?updatedAt=1780363202880",
       title: "GitHub",
       style: "shadow-white",
     },
     {
       id: 11,
-      src: postgres,
+      src: "portfolio/techs/postgres.png?updatedAt=1780363202985",
       title: "PostgreSQL",
       style: "shadow-blue-400",
     },
     {
       id: 12,
-      src: redux,
+      src: "portfolio/techs/redux.png?updatedAt=1780363202855",
       title: "Redux",
       style: "shadow-violet-700",
     },
@@ -96,13 +85,22 @@ const Techs = () => {
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div data-gsap="left">
-          <h2 id="technologies-title" className="text-4xl font-bold inline pb-1 border-b-4 border-primary-color/40 sm:text-5xl">
+          <h2
+            id="technologies-title"
+            className="text-4xl font-bold inline pb-1 border-b-4 border-primary-color/40 sm:text-5xl"
+          >
             Technologies
           </h2>
-          <p className="py-6">These are the technologies I{"'"}ve worked with as a React and Full Stack Developer</p>
+          <p className="py-6">
+            These are the technologies I{"'"}ve worked with as a React and Full
+            Stack Developer
+          </p>
         </div>
 
-        <div data-gsap-stagger="scale" className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 text-center py-8 sm:px-0">
+        <div
+          data-gsap-stagger="scale"
+          className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 text-center py-8 sm:px-0"
+        >
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
@@ -110,7 +108,7 @@ const Techs = () => {
             >
               <img
                 className="w-20 mx-auto py-2 md:py-4"
-                src={src}
+                src={imageKitUrl(src, ["w-480", "q-85", "f-auto"])}
                 alt={`${title} technology icon`}
                 width="80"
                 height="80"

@@ -6,10 +6,17 @@ import { imageKitUrl } from "../../../utils/imageKit";
 
 const Home = () => {
   return (
-    <section name="Home" aria-labelledby="home-title" className="relative w-full md:h-screen h-unset mt-20">
+    <section
+      name="Home"
+      aria-labelledby="home-title"
+      className="relative w-full md:h-screen h-unset mt-20"
+    >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8">
         <div className="flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start">
-          <h1 id="home-title" className="text-4xl md:text-6xl font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4">
+          <h1
+            id="home-title"
+            className="text-4xl md:text-6xl font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4"
+          >
             <span data-gsap="up">I {"'"}m Mahmoud Zidan</span>
           </h1>
           <h2
@@ -25,16 +32,20 @@ const Home = () => {
             className="text-gray-300 py-4 max-x-md text-justify"
           >
             React and Full-Stack Developer focused on building responsive and
-            modern web applications using React, Node.js, JavaScript, Tailwind CSS,
-            and modern web technologies. I also studied C++, Data Structures, and
-            Algorithms, and solved many problem-solving challenges to strengthen
-            my analytical and logical thinking skills. Currently improving my
-            skills by creating real-world projects and exploring scalable
-            full-stack solutions. Welcome to my portfolio, I{"'"}m excited to
-            share my journey with you!
+            modern web applications using React, Node.js, JavaScript, Tailwind
+            CSS, and modern web technologies. I also studied C++, Data
+            Structures, and Algorithms, and solved many problem-solving
+            challenges to strengthen my analytical and logical thinking skills.
+            Currently improving my skills by creating real-world projects and
+            exploring scalable full-stack solutions. Welcome to my portfolio, I
+            {"'"}m excited to share my journey with you!
           </p>
 
-          <div data-gsap="up" data-gsap-delay="0.24" className="hidden desktop:flex">
+          <div
+            data-gsap="up"
+            data-gsap-delay="0.24"
+            className="hidden desktop:flex"
+          >
             <Link
               to="About"
               smooth
@@ -56,7 +67,10 @@ const Home = () => {
         <div data-gsap="scale" className="flex order-1 md:order-2 mt-8 md:mt-0">
           <img
             //add a phto in hire
-            src={imageKitUrl("/images/mahmoud_zidan.png", ["w-480", "q-85", "f-auto"])}
+            src={imageKitUrl(
+              "portfolio/profile/mahmoud_zidan.png?updatedAt=1780363003070",
+              ["w-480", "q-85", "f-auto"],
+            )}
             alt="Mahmoud Zidan React and Full Stack Developer portrait"
             width="480"
             height="640"
